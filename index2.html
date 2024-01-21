@@ -185,15 +185,56 @@
                 justify-content: center;
                 align-items: center;
             }
+            .gen{
+                width: 300px;
+                height: 300px;
+                border: none;
+                border-radius: 5px;
+                background: url(images/20.jpg);
+                animation: slide 20s infinite;
+            }
+            @keyframes slide{
+                25%{
+                    background: url(images/20.jpg);
+                }
+                50%{
+                    background: url(images/16.jpg);
+                }
+                75%{
+                    background: url(images/19.jpg);
+                }
+                100%{
+                    background: url(images/23.jpg);
+                }
+            }
+            .stew{
+                width: 300px;
+                height: 300px;
+                border: none;
+                border-radius: 5px;
+                background: url(images/11.jpg);
+                animation: staw 20s infinite;
+            }
+            @keyframes staw{
+                25%{
+                    background: url(images/11.jpg);
+                }
+                50%{
+                    background: url(images/18.jpg);
+                }
+                75%{
+                    background: url(images/26.jpg);
+                }
+                100%{
+                    backgound: url(images/28.jpg);
+                }
+            }
             @media screen and (min-width: 757px) {
                 nav{
                     font-size: 1.5rem;
                     width: 600px;
                 }
-                img{
-                    width: 60%;
-                    height: 60%;
-                }
+                
                 ol li img{
                     width: 100px;
                     height: 100px;
@@ -229,7 +270,9 @@
                 <p>
                     Dear our beloved visitor, a heartfelt welcome to fear of god foundation<br>we are delighted to a have you visit our online home.
                 </p>
-                <img src="images/20.jpg" alt="you are most welcome" title="you are most welcome">
+                <div class="gen">
+                    
+                </div>
         </section>
 
         <main>
@@ -243,7 +286,9 @@
             <p>
                 our services focus on meeting the physical, emotional, and eduational needs of the orphans.<br>This includes providing nurturing meals, access to healthcare, a safe living environment and opportunities for education and personal development.
             </p>
-            <img src="images/11.jpg" alt="supportive care">
+            <div class="stew">
+                
+            </div>
             <p>
                 Additonally, we offer counseling and emotional support to help children cope with their loss and thrive despite their circumstances.
             </p>
@@ -254,7 +299,7 @@
                 LOCATION
             </h3>
             
-            <img src="images/27.jpg" alt="Laction">
+            <img src="images/27.jpg" alt="LOCATION">
                     
             <h3 id="DIRECTOR">
                 DIRECTOR
