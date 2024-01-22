@@ -199,7 +199,23 @@
                 }
             }
             
-            
+            .animal{
+                width: 85vmin;
+                position: relative;
+                animation: cover 10s infinite;
+            }
+            .animal img{
+                object-fit: cover;
+                
+            }
+            @keyframes cover{
+                0%{
+                    clip-path: circle(0% at center);
+                }
+                100%{
+                    clip-path: circle(100% at center);
+                }
+            }
            
             @media screen and (min-width: 757px) {
                 nav{
@@ -252,7 +268,10 @@
             <p>
                 our services focus on meeting the physical, emotional, and eduational needs of the orphans.<br>This includes providing nurturing meals, access to healthcare, a safe living environment and opportunities for education and personal development.
             </p>
-            <canvas id="myCanvas" width="200" height="200"></canvas>
+            <div class="animal">
+                <img  src="images/11.jpg" alt="">
+            </di>
+                
             <p>
                 Additonally, we offer counseling and emotional support to help children cope with their loss and thrive despite their circumstances.
             </p>
@@ -306,31 +325,7 @@
                 </p>
             </div>
         </footer>
-        <script>
-            const canvas = document.getElementById('myCanvas');
-            const ctx = canvas.getContext('2d');
-            const images = [
-                'images/11.jpg',
-                'images/18.jpg',
-                'images/26.jpg',
-                'images/28.jpg'
-            ];
-            let currentImage = 0;
-            function drawImage(img){
-                ctx.clearReact(0, 0, canvas.width, canvas.height);
-                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            }
-            function rotateImage(){
-                const img = new Img();
-                img.src = images[currentImage];
-                img.onload = function(){
-                    drawImage(img);
-                    currentImage = (currentImage + 1) % i
-                    setTimeout(rotateImage, 2000)
-                };
-                rotateImage();
-            }
-        </script>
+        
         
     </body>
     </head>
