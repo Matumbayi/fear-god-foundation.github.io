@@ -198,30 +198,9 @@
                     transform: translateX(-200%);
                 }
             }
-            .stew{
-                width: 300px;
-                height: 300px;
-                border: none;
-                border-radius: 5px;
-                object-fit: cover;
-                background-image: url(images/11.jpg);
-                animation: staw 20s infinite;
-            }
             
-            @keyframes staw{
-                25%{
-                    background: url(images/11.jpg);
-                }
-                50%{
-                    background: url(images/18.jpg);
-                }
-                75%{
-                    background: url(images/26.jpg);
-                }
-                100%{
-                    backgound: url(images/28.jpg);
-                }
-            }
+            
+           
             @media screen and (min-width: 757px) {
                 nav{
                     font-size: 1.5rem;
@@ -273,9 +252,7 @@
             <p>
                 our services focus on meeting the physical, emotional, and eduational needs of the orphans.<br>This includes providing nurturing meals, access to healthcare, a safe living environment and opportunities for education and personal development.
             </p>
-            <div class="stew">
-                
-            </div>
+            <canvas id="myCanvas" width="200" height="200"></canvas>
             <p>
                 Additonally, we offer counseling and emotional support to help children cope with their loss and thrive despite their circumstances.
             </p>
@@ -329,6 +306,31 @@
                 </p>
             </div>
         </footer>
+        <script src="">
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+            const images = [
+                'images/11.jpg',
+                'images/18.jpg',
+                'images/26.jpg',
+                'images/28.jpg'
+            ];
+            let currentImage = 0;
+            function drawImage(img){
+                ctx.clearReact(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            }
+            function rotateImage(){
+                const img = new Img();
+                img.src = images[currentImage];
+                img.onload = function(){
+                    drawImage(img);
+                    currentImage = (currentImage + 1) % i
+                    setTimeout(rotateImage, 2000)
+                };
+                rotateImage();
+            }
+        </script>
         
     </body>
     </head>
