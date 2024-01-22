@@ -186,26 +186,29 @@
                 align-items: center;
             }
             .gen{
-                position: absolute;
                 width: 300px;
                 height: 300px;
                 border: none;
                 border-radius: 5px;
-                background-image: url(images/20.jpg);
+                overflow: hidden;
+            }
+            .gen-img{
+                width: 100%;
+                display: flex;
                 animation: slide 20s infinite;
             }
             @keyframes slide{
                 25%{
-                    background: url(images/20.jpg);
+                    transform: translateX(0);
                 }
                 50%{
-                    background: url(images/16.jpg);
+                    transform: translateX(-100%);
                 }
                 75%{
-                    background: url(images/19.jpg);
+                    transform: translateX(-200%);
                 }
                 100%{
-                    background: url(images/23.jpg);
+                    transform: translateX(-300%);
                 }
             }
             .stew{
@@ -273,7 +276,11 @@
                     Dear our beloved visitor, a heartfelt welcome to fear of god foundation<br>we are delighted to a have you visit our online home.
                 </p>
                 <div class="gen">
-                    
+                    <div class="gen-img">
+                        <img src="images/20.jpg">
+                        <img src="images/16.jpg">
+                        <img src="images/19.jpg">
+                    </div>
                 </div>
         </section>
 
