@@ -210,10 +210,29 @@
             }
             .jac{
                 -webkit-text-stroke: 1px red;
-                font-size: 1.3rem;
+                font-size: 1.4rem;
                 color: transparent;
                 background-image: linear-gradient(#fff, #fff);
                 -webkit-background-clip: text;
+                background-size: 100%;
+                animation: jac 6s infinite;
+            }
+            @keyframes jac{
+                0%{
+                    background-size: 0;
+                }
+                25%{
+                    background-size: 25%;
+                }
+                50%{
+                    background-size: 50%;
+                }
+                75%{
+                    background-size: 75%;
+                }
+                100%{
+                    background-size: 100%;
+                }
             }
             
             
