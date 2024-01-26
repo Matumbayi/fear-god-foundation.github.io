@@ -175,7 +175,6 @@
             
             .gen{
                 width: 85vmin;
-                border: 2px solid white;
                 border-radius: 5px;
                 overflow: hidden;
             }
@@ -203,10 +202,27 @@
             .animal{
                 width: 85vmin;
                 position: relative;
+                overflow: hidden;
             }
-            .animal img{
-                object-fit: cover;
+            .animal-img{
+                with: 100%;
+                display: flex;
+                animation: slide1 6s infinite;
                 
+            }
+            @keyframes slide1{
+                25%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(-100%);
+                }
+                75%{
+                    transform: translateX(-200%);
+                }
+                100%{
+                    transform: translateX(-200%);
+                }
             }
             .jac{
                 -webkit-text-stroke: 1px white;
@@ -294,8 +310,12 @@
                 our services focus on meeting the physical, emotional, and eduational needs of the orphans.<br>This includes providing nurturing meals, access to healthcare, a safe living environment and opportunities for education and personal development.
             </p>
             <div class="animal">
-                <img  src="images/11.jpg" alt="">
-            </di>
+                <div class="animal-img">
+                    <img src="images/11.jpg" alt="">
+                    <img src="images/25.jpg" alt="">
+                    <img src="images/18.jpg" alt="">
+                </div>
+            </div>
                 
             <p>
                 Additonally, we offer counseling and emotional support to help children cope with their loss and thrive despite their circumstances.
